@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author UsuarioM
  */
 @RestController
-@RequestMapping("/inmobiliare")
+@RequestMapping("api")
 
 public class AddresRestController {
 
