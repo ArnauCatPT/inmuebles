@@ -1,6 +1,6 @@
-package com.examples.apiInmuebles.controller;
+package com.example.apiInmuebles.controller;
 
-import com.examples.apiInmuebles.entity.Flat;
+import com.example.apiInmuebles.entity.Flat;
 import jakarta.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,9 +23,9 @@ public class FlatRestController {
     public void loadData() {
         flatList = new ArrayList<>();
 
-        flatList.add(new Flat(10, 2, 20, 7642537, "Buena"));
-        flatList.add(new Flat(12, 1, 25, 2654276, "Nuevo"));
-        flatList.add(new Flat(2, 1, 30, 5237453, "A reformar"));
+        flatList.add(new Flat(1, 10, 2, 20, 7642537, "Buena"));
+        flatList.add(new Flat(2, 12, 1, 25, 2654276, "Nuevo"));
+        flatList.add(new Flat(3, 2, 1, 30, 5237453, "A reformar"));
     }
 
     @GetMapping("/flats")

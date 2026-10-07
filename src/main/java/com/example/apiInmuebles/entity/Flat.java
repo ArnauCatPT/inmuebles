@@ -1,4 +1,4 @@
-package com.examples.apiInmuebles.entity;
+package com.example.apiInmuebles.entity;
 
 public class Flat {
     private int id;
@@ -11,7 +11,8 @@ public class Flat {
     public Flat() {
     }
 
-    public Flat(int flatNum, int flatDoor, int area, int catastralCode, String condition) {
+    public Flat(int id, int flatNum, int flatDoor, int area, int catastralCode, String condition) {
+        this.id = id;
         this.flatNum = flatNum;
         this.flatDoor = flatDoor;
         this.area = area;
