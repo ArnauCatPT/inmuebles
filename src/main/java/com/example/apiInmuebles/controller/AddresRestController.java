@@ -43,7 +43,7 @@ public class AddresRestController {
         return addressList;
     }
 
-    @GetMapping("/address/{adressId}")
+    @GetMapping("/address/{addressId}")
     public Address getAddress(@PathVariable int addressId) {
         for (Address address : this.addressList) {
             if (address.getId() == addressId) {
