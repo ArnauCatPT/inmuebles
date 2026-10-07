@@ -10,6 +10,7 @@ package com.example.apiInmuebles.entity;
  */
 public class Address {
 
+    private int id;
     private String calle;
     private int numero;
     private int CP;
@@ -18,54 +19,64 @@ public class Address {
     public Address() {
     }
 
-    public Address(String calle, int numero, int CP, String provincia) {
+    public Address(int Id, String calle, int numero, int CP, String provincia) {
+        this.id = Id;
         this.calle = calle;
         this.numero = numero;
         this.CP = CP;
         this.provincia = provincia;
     }
 
+    
+
+    public int getId() {
+        return id;
+    }
+
+
     public String getCalle() {
         return calle;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public int getCP() {
+        return CP;
+    }
+
+    public String getProvincia() {
+        return provincia;
+    }
+
+    public void setId(int Id) {
+        this.id = Id;
     }
 
     public void setCalle(String calle) {
         this.calle = calle;
     }
 
-    
-
-    public int getNumero() {
-        return numero;
-    }
-
+   
     public void setNumero(int numero) {
         this.numero = numero;
     }
 
-    
-
-    public int getCP() {
-        return CP;
-    }
-
+   
     public void setCP(int CP) {
         this.CP = CP;
     }
 
     
-
-    public String getProvincia() {
-        return provincia;
-    }
-
     public void setProvincia(String provincia) {
         this.provincia = provincia;
     }
 
     @Override
     public String toString() {
-        return "Address{" + "calle=" + calle + ", numero=" + numero + ", CP=" + CP + ", provincia=" + provincia + '}';
+        return "Address{" + "Id=" + id + ", calle=" + calle + ", numero=" + numero + ", CP=" + CP + ", provincia=" + provincia + '}';
     }
+
     
 }
