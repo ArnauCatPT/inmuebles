@@ -37,7 +37,7 @@ public class FlatRestController {
     @GetMapping("/flats/{flatId}")
     public Flat getFlat(@PathVariable int flatId) {
         for (Flat flat : this.flatList) {
-            if (flat.getCatastralCode() == flatId) {
+            if (flat.getId() == flatId) {
                 return flat;
             }
         }
@@ -67,7 +67,7 @@ public class FlatRestController {
     
     @DeleteMapping("/flats/{flatId}")
     public String deleteFlat(@PathVariable int flatId){
-        this.flatList.removeIf(s -> s.getCatastralCode() == flatId);
+        this.flatList.removeIf(s -> s.getId() == flatId);
         
         return "Borrado el piso: " + flatId;
     }
